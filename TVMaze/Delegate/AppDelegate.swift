@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  TVMaze
 //
-//  Created by Vitor Silveira on 06/04/2018.
+//  Created by Vitor Silveira on 07/04/2018.
 //  Copyright © 2018 Vitor Silveira. All rights reserved.
 //
 
@@ -13,9 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let navigationController = UINavigationController(rootViewController: SearchViewController())
+        
+        window?.rootViewController = navigationController
+        
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
